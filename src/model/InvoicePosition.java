@@ -2,6 +2,11 @@ package model;
 
 public class InvoicePosition {
 
+    public InvoicePosition(Product product) {
+        this.product = product;
+        this.count = 1;
+    }
+
     public static final double TAX_5 = 0.05;
     public static final double TAX_8 = 0.08;
     public static final double TAX_23 = 0.23;
