@@ -2,9 +2,9 @@ package model;
 
 public class InvoicePosition {
 
-    public static final double TAX_5 = 0.05;
-    public static final double TAX_8 = 0.08;
-    public static final double TAX_23 = 0.23;
+    private static final double TAX_5 = 0.05;
+    private static final double TAX_8 = 0.08;
+    private static final double TAX_23 = 0.23;
 
     private Product product;
     private  int count;
@@ -39,7 +39,7 @@ public class InvoicePosition {
     }
 
     public double getGrossPrice() {
-        return getGrossPrice();
+        return getNettoPrice() * (1 + tax);
     }
 
     public double getTaxValue() {
