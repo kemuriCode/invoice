@@ -33,4 +33,16 @@ public class InvoicePosition {
     public void setTax(double tax) {
         this.tax = tax;
     }
+
+    public double getNettoPrice() {
+        return product.getPrice() * count;
+    }
+
+    public double getGrossPrice() {
+        return getGrossPrice();
+    }
+
+    public double getTaxValue() {
+        return getGrossPrice() - getNettoPrice();
+    }
 }
